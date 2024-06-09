@@ -1,9 +1,10 @@
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
-import Atividades from '../screens/Atividades';
+
 import Profile from '../screens/Profile';
 import Home from '../screens/Home';
 import {Feather} from '@expo/vector-icons';
 import { FontAwesome5 } from '@expo/vector-icons';
+import { AtividadeStack } from './stack.routes';
 
 const Tab = createBottomTabNavigator();
 
@@ -21,7 +22,7 @@ export default function TabRoutes() {
       <Tab.Screen
 
         name="Atividades"
-        component={Atividades}
+        component={AtividadeStack}
         options={{
           tabBarIcon: ({color, size}) => <FontAwesome5 name="list-alt" size={size} color={color} />,
         }}
