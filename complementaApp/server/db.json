@@ -1,1 +1,178 @@
+<<<<<<< Updated upstream
 {}
+=======
+{
+  "activities": [
+    {
+      "id": "20240601",
+      "name": "Revisão de Literatura",
+      "description": "A revisão de literatura é uma atividade acadêmica crucial que envolve a análise crítica de trabalhos já publicados sobre um determinado tema. Esse processo é fundamental para a construção de um conhecimento sólido, permitindo que o pesquisador identifique lacunas na literatura existente, tendências de pesquisa e metodologias aplicadas. A revisão de literatura também auxilia na formulação de hipóteses e na definição de objetivos claros para o estudo. Além disso, ela proporciona uma base teórica robusta que sustenta a pesquisa e confere credibilidade ao trabalho acadêmico desenvolvido.",
+      "status": 1,
+      "executor": "Ana"
+    },
+    {
+      "id": "20240602",
+      "name": "Desenvolvimento de Metodologia",
+      "description": "O desenvolvimento de metodologia é um componente vital da pesquisa acadêmica, pois define o conjunto de métodos e técnicas que serão utilizados para conduzir o estudo. Esta etapa envolve a seleção de abordagens qualitativas ou quantitativas, a definição de instrumentos de coleta de dados, e a elaboração de procedimentos para análise dos resultados. Uma metodologia bem estruturada garante a validade e a confiabilidade dos achados, além de permitir a replicabilidade do estudo por outros pesquisadores. A escolha cuidadosa da metodologia é essencial para alcançar os objetivos de pesquisa de forma precisa e objetiva.",
+      "status": 4,
+      "executor": "Carlos"
+    },
+    {
+      "id": "20240603",
+      "name": "Coleta de Dados",
+      "description": "A coleta de dados é uma fase crucial na pesquisa acadêmica, onde informações relevantes são obtidas para responder às perguntas de pesquisa e testar hipóteses formuladas. Esta etapa pode envolver diversos métodos, como entrevistas, questionários, observações diretas e experimentos. A qualidade e a precisão dos dados coletados são fundamentais para a validade dos resultados do estudo. Durante a coleta de dados, é essencial seguir procedimentos éticos e garantir o consentimento informado dos participantes, além de assegurar a confidencialidade e a privacidade das informações obtidas.",
+      "status": 1,
+      "executor": "Beatriz"
+    },
+    {
+      "id": "20240605",
+      "name": "Elaboração de Questionário",
+      "description": "A elaboração de questionário é uma etapa essencial na pesquisa quantitativa, onde são desenvolvidas perguntas que visam coletar dados específicos dos participantes. Este processo envolve a definição clara dos objetivos da pesquisa, a formulação de questões precisas e objetivas, e a escolha de um formato apropriado para o questionário. Uma boa elaboração de questionário considera a validade e a confiabilidade das perguntas, bem como a facilidade de compreensão pelos respondentes. Além disso, é importante realizar testes piloto para identificar possíveis problemas e ajustar as perguntas antes da aplicação definitiva.",
+      "status": 1,
+      "executor": "Eduardo"
+    },
+    {
+      "id": "20240606",
+      "name": "Pesquisa de Campo",
+      "description": "A pesquisa de campo é uma atividade acadêmica que envolve a coleta de dados diretamente no local onde o fenômeno estudado ocorre. Esta etapa é crucial para obter informações contextuais e observar o comportamento dos sujeitos em seu ambiente natural. A pesquisa de campo pode incluir métodos como entrevistas, observações, e aplicação de questionários. Os dados obtidos são valiosos para compreender a realidade do fenômeno investigado e para validar teorias desenvolvidas em ambiente controlado. A pesquisa de campo exige preparação cuidadosa e uma abordagem ética para garantir a integridade dos dados e o respeito aos participantes.",
+      "status": 2,
+      "executor": "Fernanda"
+    },
+    {
+      "id": "20240607",
+      "name": "Estudo de Caso",
+      "description": "O estudo de caso é um método de pesquisa que envolve a análise detalhada e aprofundada de um único caso ou de um número limitado de casos. Este método é amplamente utilizado em pesquisas qualitativas para explorar fenômenos complexos em contextos específicos. O estudo de caso permite a coleta de dados ricos e detalhados, fornecendo uma compreensão profunda do fenômeno em estudo. Ele é particularmente útil para explorar novas áreas de pesquisa, gerar hipóteses e desenvolver teorias. A análise de um estudo de caso envolve a triangulação de dados provenientes de diversas fontes, como entrevistas, documentos e observações.",
+      "status": 1,
+      "executor": "Gabriel"
+    },
+    {
+      "id": "20240608",
+      "name": "Análise Bibliométrica",
+      "description": "A análise bibliométrica é uma técnica de pesquisa quantitativa que envolve o uso de métodos estatísticos para analisar publicações científicas. Esta análise permite identificar padrões de publicação, redes de colaboração entre pesquisadores, e áreas emergentes de pesquisa. A análise bibliométrica utiliza dados de bases de dados científicas para medir a produção científica, o impacto de publicações, e a influência de pesquisadores. Este método é valioso para mapear o desenvolvimento de campos do conhecimento, avaliar a performance de instituições acadêmicas, e informar políticas científicas. A análise bibliométrica contribui para uma visão abrangente do panorama científico.",
+      "status": 2,
+      "executor": "Heloísa"
+    },
+    {
+      "id": "20240609",
+      "name": "Redação de Artigo Científico",
+      "description": "A redação de artigo científico é uma etapa crucial para a comunicação dos resultados de pesquisa. Este processo envolve a estruturação do artigo de acordo com as normas acadêmicas, a apresentação clara dos objetivos, metodologia, resultados e conclusões do estudo. A redação deve ser precisa, objetiva e fundamentada em evidências sólidas. Além disso, é essencial revisar o texto para garantir a correção gramatical e a coerência das ideias apresentadas. A publicação de artigos científicos em revistas especializadas contribui para a disseminação do conhecimento, o avanço da ciência e o reconhecimento do trabalho do pesquisador.",
+      "status": 1,
+      "executor": "Isabela"
+    },
+    {
+      "id": "20240610",
+      "name": "Apresentação de Resultados",
+      "description": "A apresentação de resultados é uma etapa fundamental no processo de pesquisa, onde os achados do estudo são comunicados a uma audiência acadêmica ou pública. Esta apresentação pode ocorrer em conferências, seminários, ou por meio de publicações científicas. A clareza e a precisão na apresentação dos resultados são essenciais para garantir a compreensão e a avaliação crítica por parte dos colegas e especialistas na área. Além disso, a apresentação deve incluir uma discussão dos resultados à luz da literatura existente e das hipóteses formuladas. A comunicação eficaz dos resultados contribui para o impacto e a relevância do trabalho acadêmico.",
+      "status": 1,
+      "executor": "João"
+    },
+    {
+      "id": "20240611",
+      "name": "Revisão por Pares",
+      "description": "A revisão por pares é um processo fundamental no ciclo de publicação acadêmica, garantindo a qualidade e a validade dos artigos científicos antes de sua publicação. Este processo envolve a avaliação crítica do manuscrito por especialistas da área, que analisam a metodologia, os resultados, a relevância e a originalidade do estudo. A revisão por pares ajuda a identificar possíveis erros, fornecer sugestões de melhoria e assegurar que o trabalho atenda aos padrões científicos. Além disso, este processo contribui para a credibilidade e a confiança na literatura científica, mantendo a integridade do conhecimento produzido.",
+      "status": 1,
+      "executor": "Karina"
+    },
+    {
+      "id": "20240612",
+      "name": "Defesa de Tese",
+      "description": "A defesa de tese é uma etapa final e crucial no processo de obtenção de um título acadêmico, como um doutorado. Esta atividade envolve a apresentação pública dos resultados da pesquisa diante de uma banca examinadora composta por especialistas na área. Durante a defesa, o candidato deve demonstrar domínio do tema, explicar a metodologia utilizada, discutir os resultados obtidos e responder às perguntas dos examinadores. A defesa de tese é um momento de avaliação rigorosa, onde a originalidade, a relevância e a contribuição do trabalho para o campo do conhecimento são cuidadosamente analisadas.",
+      "status": 1,
+      "executor": "Lucas"
+    },
+    {
+      "id": "20240613",
+      "name": "Participação em Conferência",
+      "description": "A participação em conferência é uma atividade acadêmica importante que envolve a apresentação e a discussão de trabalhos de pesquisa com a comunidade científica. As conferências proporcionam uma plataforma para a troca de ideias, a atualização sobre os avanços mais recentes na área de estudo e o estabelecimento de redes de colaboração. Participar de conferências permite ao pesquisador receber feedback valioso sobre seu trabalho, identificar novas tendências de pesquisa e aumentar a visibilidade de suas contribuições científicas. Além disso, essas atividades são fundamentais para o desenvolvimento profissional e para a disseminação do conhecimento.",
+      "status": 1,
+      "executor": "Mariana"
+    },
+    {
+      "id": "20240614",
+      "name": "Publicação em Revista Científica",
+      "description": "A publicação em revista científica é uma meta importante para qualquer pesquisador, pois representa o reconhecimento e a validação de seu trabalho pela comunidade acadêmica. Este processo envolve a submissão de um manuscrito para revisão por pares, a incorporação de sugestões de melhoria e a eventual aceitação do artigo para publicação. Publicar em revistas científicas de alto impacto aumenta a visibilidade e a credibilidade do pesquisador, contribuindo para a disseminação do conhecimento e para o avanço da ciência. Além disso, a publicação em revistas científicas é um indicador importante de produtividade e excelência acadêmica.",
+      "status": 1,
+      "executor": "Nicolas"
+    },
+    {
+      "id": "20240615",
+      "name": "Orientação de Estudantes",
+      "description": "A orientação de estudantes é uma atividade acadêmica que envolve o acompanhamento e o suporte aos alunos durante o desenvolvimento de seus trabalhos de pesquisa. O orientador desempenha um papel fundamental no planejamento do projeto, na definição de objetivos claros, na escolha da metodologia adequada e na análise dos resultados. Além disso, o orientador deve fornecer feedback construtivo, motivar os estudantes e ajudá-los a superar desafios. A orientação eficaz contribui para a formação de pesquisadores competentes, o desenvolvimento de habilidades acadêmicas e a produção de conhecimento científico de alta qualidade.",
+      "status": 1,
+      "executor": "Olívia"
+    },
+    {
+      "id": "20240616",
+      "name": "Tradução de Artigo Científico",
+      "description": "A tradução de artigo científico é uma atividade importante para a disseminação internacional do conhecimento. Este processo envolve a conversão do texto original para outro idioma, mantendo a precisão e a clareza das informações. A tradução deve ser realizada por profissionais com conhecimento na área de estudo e habilidades linguísticas adequadas. Uma tradução bem-feita garante que os resultados da pesquisa sejam compreendidos por uma audiência mais ampla, facilitando a colaboração internacional e o intercâmbio de ideias. Além disso, a tradução de artigos científicos contribui para a visibilidade global do trabalho do pesquisador.",
+      "status": 1,
+      "executor": "Paulo"
+    },
+    {
+      "id": "20240617",
+      "name": "Elaboração de Projeto de Pesquisa",
+      "description": "A elaboração de projeto de pesquisa é uma etapa inicial e fundamental no processo de investigação científica. Este documento define o problema de pesquisa, os objetivos, a justificativa, a metodologia e o cronograma das atividades a serem realizadas. Um projeto de pesquisa bem elaborado deve ser claro, conciso e viável, proporcionando uma base sólida para a condução do estudo. Além disso, o projeto de pesquisa é frequentemente utilizado para solicitação de financiamento e aprovação ética. Uma boa elaboração de projeto aumenta as chances de sucesso da pesquisa e contribui para a sua relevância e impacto.",
+      "status": 1,
+      "executor": "Quintino"
+    },
+    {
+      "id": "08d8",
+      "name": "",
+      "description": "",
+      "status": 3,
+      "executor": ""
+    },
+    {
+      "id": "2ea9",
+      "name": "",
+      "description": "",
+      "status": 3,
+      "executor": ""
+    },
+    {
+      "id": 19,
+      "name": "mateus",
+      "description": "",
+      "status": 3,
+      "executor": "Atividade sem executor"
+    },
+    {
+      "id": "6e18",
+      "name": "Nova Atividade",
+      "description": "Descrição da nova atividade",
+      "status": 3,
+      "executor": "Atividade sem executor"
+    }
+  ],
+  "users": [
+    {
+      "id": "1",
+      "name": "João",
+      "email": "joao@ufpr.br",
+      "password": "123456"
+    },
+    {
+      "id": "2",
+      "name": "Maria",
+      "email": "maria@ufpr.br",
+      "password": "123456"
+    }
+  ],
+  "status": {
+    "status": [
+      {
+        "id": "1",
+        "name": "Concluída"
+      },
+      {
+        "id": "2",
+        "name": "Em andamento"
+      },
+      {
+        "id": "3",
+        "name": "Pendente"
+      }
+    ]
+  }
+}
+>>>>>>> Stashed changes
