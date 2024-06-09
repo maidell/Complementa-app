@@ -12,7 +12,7 @@ import {
 } from 'react-native';
 import {Atividade} from '../models/models';
 
-export default function Atividades({ navigation }: { navigation: any }) {
+export default function Atividades({navigation}: {navigation: any}) {
   const [refreshing, setRefreshing] = useState(false);
   const [activities, setActivities] = useState([]);
   const [selectedActivity, setSelectedActivity] = useState<Atividade | null>(
@@ -148,6 +148,34 @@ export default function Atividades({ navigation }: { navigation: any }) {
     );
   }
 
+  function handleDelete() {
+    Alert.alert(
+      'Excluir atividade',
+      'Deseja realmente excluir esta atividade?',
+      [
+        {
+          text: 'Cancelar',
+          style: 'cancel',
+        },
+        {
+          text: 'Excluir',
+          onPress: () => {
+            fetch(`${url}/${selectedActivity!.id}`, {
+              method: 'DELETE',
+            }).then(() => {
+              Alert.alert(
+                'Atividade excluída',
+                'A atividade foi excluída com sucesso!',
+              );
+              setModalVisible(false);
+              fetchData();
+            });
+          },
+        },
+      ],
+    );
+  }
+
   function getStatusDescription(status: number) {
     switch (status) {
       case 1:
@@ -177,18 +205,19 @@ export default function Atividades({ navigation }: { navigation: any }) {
     fetchData().then(() => setRefreshing(false));
   }
 
-
   return (
     <ScrollView
-    refreshControl={<RefreshControl refreshing={refreshing} onRefresh={onRefresh} />}
-    contentContainerStyle={styles.container}>
-      <Button
+      refreshControl={
+        <RefreshControl refreshing={refreshing} onRefresh={onRefresh} />
+      }
+      contentContainerStyle={styles.container}>
+      {/* <Button
         title="Nova Atividade"
         color="#44bbff"
         onPress={() => navigation.navigate('CreateActivity')}
-      />
+      /> */}
       {activities.map((activity: Atividade) => (
-        <View key={activity.id} style={styles.card} >
+        <View key={activity.id} style={styles.card}>
           <View
             style={[
               styles.statusIndicator,
@@ -214,7 +243,7 @@ export default function Atividades({ navigation }: { navigation: any }) {
             setModalVisible(!modalVisible);
           }}>
           <TouchableWithoutFeedback onPress={() => setModalVisible(false)}>
-            <View style={styles.modalBackground} >
+            <View style={styles.modalBackground}>
               <View style={styles.modalView}>
                 <View
                   style={[
@@ -285,12 +314,26 @@ export default function Atividades({ navigation }: { navigation: any }) {
                           marginTop: 10,
                         },
                       ]}>
-                      <Text style={[styles.buttonText, { color: '#fff' }]}>
+                      <Text style={[styles.buttonText, {color: '#fff'}]}>
                         Cancelar Atividade
                       </Text>
                     </View>
                   </TouchableWithoutFeedback>
                 )}
+                <TouchableWithoutFeedback onPress={handleDelete}>
+                  <View
+                    style={[
+                      styles.button,
+                      {
+                        backgroundColor: '#ff0000',
+                        marginTop: 10,
+                      },
+                    ]}>
+                    <Text style={[styles.buttonText, {color: '#fff'}]}>
+                      Excluir Atividade
+                    </Text>
+                  </View>
+                </TouchableWithoutFeedback>
               </View>
             </View>
           </TouchableWithoutFeedback>
@@ -379,15 +422,14 @@ const styles = StyleSheet.create({
     justifyContent: 'flex-start',
   },
   button: {
-    backgroundColor: '#44bbff', // Cor de fundo do botão
+    backgroundColor: '#44bbff',
     paddingVertical: 10,
     paddingHorizontal: 20,
     borderRadius: 20,
     alignItems: 'center',
   },
   buttonText: {
-    color: '#fff', // Cor do texto dentro do botão
-    fontWeight: 'bold', // Texto em negrito
+    color: '#fff',
+    fontWeight: 'bold',
   },
 });
-

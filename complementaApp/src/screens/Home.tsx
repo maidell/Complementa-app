@@ -1,40 +1,43 @@
 import React from 'react';
 import {View, Text, StyleSheet, Button, Alert} from 'react-native';
+import { Image } from 'react-native';
 
 export function Home  ()  {
   return (
-
+      //coloca a logo
       <View style={styles.container}>
-        <Text style={styles.titulo}>Bem-vindo ao meu App!</Text>
+<Image
+          style={styles.logo}
+        source={require('../assets/logo.png')}/>
+
+        <Text style={styles.titulo}>Bem vindo ao Complementa!</Text>
         <Text style={styles.descricao}>
-          Pagina Inicial lorem ipsum dolor sit amet.
+          O aplicativo de horas formativas da UFPR
         </Text>
-        <Button
-          title={'Home'}
-          color="#44bbff"
-          onPress={() => Alert.alert('Simple Button pressed')}
-        />
+
       </View>
 
   );
 };
 
 const styles = StyleSheet.create({
+  logo:{
+    width: 250,
+    marginBottom: -40,
+    resizeMode: 'contain',
+    top: -280,
+  },
   container: {
     flex: 1,
     backgroundColor: '#fff',
     alignItems: 'center',
     justifyContent: 'center',
   },
-  logo: {
-    width: 200,
-    height: 200,
-    resizeMode: 'contain',
-  },
   titulo: {
+    flexDirection: 'row',
     fontSize: 24,
     fontWeight: 'bold',
-    margin: 20,
+
   },
   descricao: {
     fontSize: 16,

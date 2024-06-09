@@ -1,44 +1,89 @@
-import React from 'react';
-import {View, Text, StyleSheet, Button, Alert} from 'react-native';
-
+import React, { useState } from 'react';
+import { View, Text, StyleSheet, Alert, TouchableOpacity, TouchableWithoutFeedback, Keyboard } from 'react-native'; // Adicione TouchableWithoutFeedback e Keyboard
+import { Input } from '../components/input';
+import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome';
+import { faEye, faEyeSlash } from '@fortawesome/free-solid-svg-icons';
+import { Button } from 'native-base'
 const Profile = () => {
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [showPassword, setShowPassword] = useState(false);
+
+  const handleSaveProfile = () => {
+    console.log('Nome:', name);
+    console.log('Email:', email);
+    console.log('Senha:', password);
+    Alert.alert('Perfil salvo com sucesso!');
+  };
+
+  const dismissKeyboard = () => {
+    Keyboard.dismiss();
+  };
+
   return (
-
+    <TouchableWithoutFeedback onPress={dismissKeyboard}>
       <View style={styles.container}>
-        <Text style={styles.titulo}>Bem-vindo ao meu App!</Text>
-        <Text style={styles.descricao}>
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Placeat, accusamus magni sequi at nulla, dolor, id quas doloremque quo iste voluptate! Dolor, amet reprehenderit veritatis expedita in impedit non laudantium.
-        </Text>
-        <Button
-          title={'Profile'}
-          color="#44bbff"
-          onPress={() => Alert.alert('Simple Button pressed')}
+        <Text style={styles.label}>Nome:</Text>
+        <Input
+          value={name}
+          onChangeText={setName}
+          placeholder="Digite seu nome"
         />
-      </View>
+        <Text style={styles.label}>Email:</Text>
+        <Input
+          value={email}
+          onChangeText={setEmail}
+          placeholder="Digite seu email"
+          keyboardType="email-address"
+        />
+        <Text style={styles.label}>Senha:</Text>
+        <View>
+          <Input
+            value={password}
+            onChangeText={setPassword}
+            placeholder="Digite sua senha"
+            secureTextEntry={!showPassword}
+            style={styles.input}
+          />
+          <TouchableOpacity onPress={() => setShowPassword(!showPassword)} style={styles.eyeIcon}>
+            <FontAwesomeIcon icon={showPassword ? faEye : faEyeSlash} size={20} />
+          </TouchableOpacity>
+        </View>
+        <Button style={styles.buttonNew}  onPress={handleSaveProfile}>
+          Salvar
+        </Button>
 
+      </View>
+    </TouchableWithoutFeedback>
   );
 };
-
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+    padding: 20,
   },
-  logo: {
-    width: 200,
-    height: 200,
-    resizeMode: 'contain',
+  label: {
+    fontSize: 18,
+    marginBottom: 5,
+    marginTop: 10,
+    fontFamily: 'Poppins-Regular',
   },
-  titulo: {
-    fontSize: 24,
-    fontWeight: 'bold',
-    margin: 20,
+  input: {
+    height: 40,
+    flex: 1,
+    paddingRight: 40,
   },
-  descricao: {
-    fontSize: 16,
-    color: '#666',
+  buttonNew: {
+    marginTop: 20,
+    backgroundColor: '#00C299',
+    borderRadius: 12,
+  },
+  eyeIcon: {
+    position: 'absolute',
+    right: 10,
+    top: '50%',
+    transform: [{ translateY: -10 }],
   },
 });
 
