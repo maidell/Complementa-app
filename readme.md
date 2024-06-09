@@ -63,6 +63,21 @@ O projeto em sua versão WEB pode ser encontrado em [TCC-Complementa_UFPR](https
 
 Contribuições são bem-vindas! Sinta-se à vontade para abrir uma issue ou enviar um pull request.
 
+## Capturas de Tela
+
+## Capturas de Tela
+
+Aqui estão algumas capturas de tela do aplicativo:
+
+<div style="display: flex;">
+  <img src="./complementaApp/src/assets/home.png" alt="Tela de Inicial" width="200" style="margin-right: 5px;" />
+  <img src="./complementaApp/src/assets/atividades.png" alt="Lista de atividades" width="200" style="margin-right: 5px;" />
+  <img src="./complementaApp/src/assets/profile.png" alt="Meu perfil" width="200" style="margin-right: 5px;" />
+  <img src="./complementaApp/src/assets/new.png" alt="Nova atividade" width="200" style="margin-right: 5px;" />
+</div>
+
+
+
 ## Licença
 
 Este projeto está licenciado sob a [GNU General Public License v3.0](LICENSE).
