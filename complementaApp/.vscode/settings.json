@@ -1,0 +1,5 @@
+{
+	"java.project.sourcePaths": [
+		"node_modules/is-unicode-supported"
+	]
+}
