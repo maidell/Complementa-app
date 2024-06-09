@@ -1,27 +1,21 @@
 import React from 'react';
-import {View, Text, StyleSheet, Button, Alert} from 'react-native';
-import { Image } from 'react-native';
+import {View, Text, StyleSheet} from 'react-native';
+import {Image} from 'react-native';
 
-export function Home  ()  {
+export function Home() {
   return (
-      //coloca a logo
-      <View style={styles.container}>
-<Image
-          style={styles.logo}
-        source={require('../assets/logo.png')}/>
-
-        <Text style={styles.titulo}>Bem vindo ao Complementa!</Text>
-        <Text style={styles.descricao}>
-          O aplicativo de horas formativas da UFPR
-        </Text>
-
-      </View>
-
+    <View style={styles.container}>
+      <Image style={styles.logo} source={require('../assets/logo.png')} />
+      <Text style={styles.titulo}>Bem vindo ao Complementa!</Text>
+      <Text style={styles.descricao}>
+        O aplicativo de horas formativas da UFPR
+      </Text>
+    </View>
   );
-};
+}
 
 const styles = StyleSheet.create({
-  logo:{
+  logo: {
     width: 250,
     marginBottom: -40,
     resizeMode: 'contain',
@@ -37,7 +31,6 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     fontSize: 24,
     fontWeight: 'bold',
-
   },
   descricao: {
     fontSize: 16,

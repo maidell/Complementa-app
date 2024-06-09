@@ -1,9 +1,17 @@
-import React, { useState } from 'react';
-import { View, Text, StyleSheet, Alert, TouchableOpacity, TouchableWithoutFeedback, Keyboard } from 'react-native'; // Adicione TouchableWithoutFeedback e Keyboard
-import { Input } from '../components/input';
-import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome';
-import { faEye, faEyeSlash } from '@fortawesome/free-solid-svg-icons';
-import { Button } from 'native-base'
+import React, {useState} from 'react';
+import {
+  View,
+  Text,
+  StyleSheet,
+  Alert,
+  TouchableOpacity,
+  TouchableWithoutFeedback,
+  Keyboard,
+} from 'react-native'; // Adicione TouchableWithoutFeedback e Keyboard
+import {Input} from '../components/input';
+import {FontAwesomeIcon} from '@fortawesome/react-native-fontawesome';
+import {faEye, faEyeSlash} from '@fortawesome/free-solid-svg-icons';
+import {Button} from 'native-base';
 const Profile = () => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
@@ -46,14 +54,18 @@ const Profile = () => {
             secureTextEntry={!showPassword}
             style={styles.input}
           />
-          <TouchableOpacity onPress={() => setShowPassword(!showPassword)} style={styles.eyeIcon}>
-            <FontAwesomeIcon icon={showPassword ? faEye : faEyeSlash} size={20} />
+          <TouchableOpacity
+            onPress={() => setShowPassword(!showPassword)}
+            style={styles.eyeIcon}>
+            <FontAwesomeIcon
+              icon={showPassword ? faEye : faEyeSlash}
+              size={20}
+            />
           </TouchableOpacity>
         </View>
-        <Button style={styles.buttonNew}  onPress={handleSaveProfile}>
+        <Button style={styles.buttonNew} onPress={handleSaveProfile}>
           Salvar
         </Button>
-
       </View>
     </TouchableWithoutFeedback>
   );
@@ -83,7 +95,7 @@ const styles = StyleSheet.create({
     position: 'absolute',
     right: 10,
     top: '50%',
-    transform: [{ translateY: -10 }],
+    transform: [{translateY: -10}],
   },
 });
 

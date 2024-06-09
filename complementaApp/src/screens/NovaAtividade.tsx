@@ -1,19 +1,16 @@
-import React, { useState } from 'react';
-import { Center, Heading, VStack, Button, ScrollView, Text, View } from 'native-base';
-import { Alert, StyleSheet } from 'react-native';
-import { Input } from '../components/input';
-import { TextArea } from '../components/textArea';
-import { Atividade } from '../models/models';
-import { goBack } from '@react-navigation/routers/lib/typescript/src/CommonActions';
+import React, {useState} from 'react';
+import {Button, ScrollView, Text, View} from 'native-base';
+import {Alert, StyleSheet} from 'react-native';
+import {Input} from '../components/input';
+import {TextArea} from '../components/textArea';
 
-export default function CreateActivity({ navigation }: { navigation: any }) {
+export default function CreateActivity({navigation}: {navigation: any}) {
   const [name, setName] = useState('');
   const [description, setDescription] = useState('');
 
   const url = 'http://192.168.1.3:3000/activities';
 
   function saveActivity() {
-    // Validar campos de entrada
     if (name.length < 10) {
       Alert.alert('Título da atividade deve ter pelo menos 10 caracteres.');
       return;
@@ -41,7 +38,6 @@ export default function CreateActivity({ navigation }: { navigation: any }) {
     })
       .then(response => response.json())
       .then(() => {
-        // Depois de salvar, limpa os campos e volta para a tela de atividades
         setName('');
         setDescription('');
         navigation.navigate('ActivityList');
@@ -54,7 +50,7 @@ export default function CreateActivity({ navigation }: { navigation: any }) {
   }
 
   return (
-    <ScrollView >
+    <ScrollView>
       <View style={styles.container}>
         <Text style={styles.label}>Titulo da atividade:</Text>
         <Input
@@ -77,7 +73,6 @@ export default function CreateActivity({ navigation }: { navigation: any }) {
 }
 
 const styles = StyleSheet.create({
-
   buttonNew: {
     backgroundColor: '#00C299',
     borderRadius: 12,

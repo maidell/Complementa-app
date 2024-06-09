@@ -1,6 +1,6 @@
-import { createNativeStackNavigator } from "@react-navigation/native-stack";
-import Atividades from "../screens/Atividades";
-import CreateActivity from "../screens/NovaAtividade";
+import {createNativeStackNavigator} from '@react-navigation/native-stack';
+import Atividades from '../screens/Atividades';
+import CreateActivity from '../screens/NovaAtividade';
 
 const Stack = createNativeStackNavigator();
 
