@@ -11,7 +11,7 @@
       "id": "20240602",
       "name": "Desenvolvimento de Metodologia",
       "description": "O desenvolvimento de metodologia é um componente vital da pesquisa acadêmica, pois define o conjunto de métodos e técnicas que serão utilizados para conduzir o estudo. Esta etapa envolve a seleção de abordagens qualitativas ou quantitativas, a definição de instrumentos de coleta de dados, e a elaboração de procedimentos para análise dos resultados. Uma metodologia bem estruturada garante a validade e a confiabilidade dos achados, além de permitir a replicabilidade do estudo por outros pesquisadores. A escolha cuidadosa da metodologia é essencial para alcançar os objetivos de pesquisa de forma precisa e objetiva.",
-      "status": 2,
+      "status": 4,
       "executor": "Carlos"
     },
     {
@@ -46,7 +46,7 @@
       "id": "20240608",
       "name": "Análise Bibliométrica",
       "description": "A análise bibliométrica é uma técnica de pesquisa quantitativa que envolve o uso de métodos estatísticos para analisar publicações científicas. Esta análise permite identificar padrões de publicação, redes de colaboração entre pesquisadores, e áreas emergentes de pesquisa. A análise bibliométrica utiliza dados de bases de dados científicas para medir a produção científica, o impacto de publicações, e a influência de pesquisadores. Este método é valioso para mapear o desenvolvimento de campos do conhecimento, avaliar a performance de instituições acadêmicas, e informar políticas científicas. A análise bibliométrica contribui para uma visão abrangente do panorama científico.",
-      "status": 3,
+      "status": 2,
       "executor": "Heloísa"
     },
     {
@@ -111,6 +111,34 @@
       "description": "A elaboração de projeto de pesquisa é uma etapa inicial e fundamental no processo de investigação científica. Este documento define o problema de pesquisa, os objetivos, a justificativa, a metodologia e o cronograma das atividades a serem realizadas. Um projeto de pesquisa bem elaborado deve ser claro, conciso e viável, proporcionando uma base sólida para a condução do estudo. Além disso, o projeto de pesquisa é frequentemente utilizado para solicitação de financiamento e aprovação ética. Uma boa elaboração de projeto aumenta as chances de sucesso da pesquisa e contribui para a sua relevância e impacto.",
       "status": 1,
       "executor": "Quintino"
+    },
+    {
+      "id": "08d8",
+      "name": "",
+      "description": "",
+      "status": 3,
+      "executor": ""
+    },
+    {
+      "id": "2ea9",
+      "name": "",
+      "description": "",
+      "status": 3,
+      "executor": ""
+    },
+    {
+      "id": 19,
+      "name": "mateus",
+      "description": "",
+      "status": 3,
+      "executor": "Atividade sem executor"
+    },
+    {
+      "id": "6e18",
+      "name": "Nova Atividade",
+      "description": "Descrição da nova atividade",
+      "status": 3,
+      "executor": "Atividade sem executor"
     }
   ],
   "users": [

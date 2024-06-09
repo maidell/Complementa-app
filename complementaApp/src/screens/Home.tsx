@@ -1,7 +1,7 @@
 import React from 'react';
 import {View, Text, StyleSheet, Button, Alert} from 'react-native';
 
-const Home = () => {
+export function Home  ()  {
   return (
 
       <View style={styles.container}>
