@@ -22,10 +22,10 @@ export default function TabRoutes() {
             iconName = faHome;
           } else if (route.name === 'Atividades') {
             iconName = faListAlt;
-          } else if (route.name === 'Meu Perfil') {
-            iconName = faUser;
           } else if (route.name === 'Nova Atividade') {
             iconName = faPlus;
+          } else if (route.name === 'Meu Perfil') {
+            iconName = faUser;
           }
 
           // Return the FontAwesomeIcon component
