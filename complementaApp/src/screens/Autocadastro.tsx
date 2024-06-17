@@ -9,9 +9,11 @@ import {
 	Keyboard,
 	KeyboardAvoidingView,
 	Platform,
+	Image,
 } from 'react-native';
 import { Input } from '../components/input';
 import { useNavigation } from '@react-navigation/native';
+import { ScrollView } from 'react-native-gesture-handler';
 
 const Autocadastro: React.FC = () => {
 	const [name, setName] = useState('');
@@ -37,19 +39,42 @@ const Autocadastro: React.FC = () => {
 		}
 	};
 
-	const validateEmail = (value: string) => {
+	const validateEmail = async (value: string) => {
 		if (value.trim().length === 0) {
 			setEmailError('Email não pode ser vazio');
 		} else if (!value.includes('@')) {
 			setEmailError('Email inválido');
-		} else if (value == '@ufpr.br'){
-			setEmailError('Preencha o email corretamente')
+		} else if (value === '@ufpr.br') {
+			setEmailError('Preencha o email corretamente');
 			setEmail('');
-		}
-		else {
+		} else {
 			setEmailError('');
+
+			// Verifica se o email já está cadastrado
+			const emailAlreadyRegistered = await isEmailAlreadyRegistered(value);
+			if (emailAlreadyRegistered) {
+				setEmailError('Este email já está cadastrado');
+			}
 		}
 	};
+
+	const isEmailAlreadyRegistered = async (email: string): Promise<boolean> => {
+		try {
+			const response = await fetch(`http://192.168.1.3:3000/users?email=${encodeURIComponent(email)}`);
+			if (response.ok) {
+				const data = await response.json();
+				// Verifica se há algum usuário com o mesmo email
+				return data.length > 0;
+			} else {
+				console.error('Erro ao verificar email existente');
+				return false;
+			}
+		} catch (error) {
+			console.error(error);
+			return false;
+		}
+	};
+
 
 	const validatePassword = (value: string) => {
 		if (value.trim().length === 0) {
@@ -84,13 +109,21 @@ const Autocadastro: React.FC = () => {
 			return;
 		}
 
+		// Verifica se o email já está cadastrado
+		const emailAlreadyRegistered = await isEmailAlreadyRegistered(email);
+		if (emailAlreadyRegistered) {
+			Alert.alert('Erro', 'Este email já está cadastrado');
+			return;
+		}
+
 		try {
+			const newUser: User = { name, email, password, role: 'user' };
 			const response = await fetch('http://192.168.1.3:3000/users', {
 				method: 'POST',
 				headers: {
 					'Content-Type': 'application/json',
 				},
-				body: JSON.stringify({ name, email, password, role: 'user' }),
+				body: JSON.stringify(newUser),
 			});
 
 			if (response.ok) {
@@ -111,6 +144,7 @@ const Autocadastro: React.FC = () => {
 
 	const handleEmailChange = (text: string) => {
 		setEmail(text);
+		validateEmail(text);
 		if (text.includes('@')) {
 			// Autocomplete com "@ufpr.br" se o usuário digita '@'
 			setEmail(text.split('@')[0] + '@ufpr.br');
@@ -129,8 +163,9 @@ const Autocadastro: React.FC = () => {
 				style={styles.container}
 				behavior={Platform.OS === 'ios' ? 'padding' : 'height'}
 				keyboardVerticalOffset={Platform.OS === 'ios' ? 0 : 0}
-			>
+				>
 				<View style={styles.inner}>
+				<Image style={styles.logo} source={require('../assets/logo.png')} />
 					<Text style={styles.title}>Cadastro de Usuário</Text>
 					<Input
 						placeholder="Nome"
@@ -209,6 +244,15 @@ const Autocadastro: React.FC = () => {
 };
 
 const styles = StyleSheet.create({
+	logo: {
+		width: 250,
+		marginBottom: -40,
+		resizeMode: 'contain',
+		display: 'flex',
+		alignSelf: 'center',
+		marginTop: 20,
+		marginEnd: 20,
+	},
 	btns: {
 		marginTop: 20,
 		display: 'flex',

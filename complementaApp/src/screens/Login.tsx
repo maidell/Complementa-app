@@ -59,8 +59,8 @@ const Login: React.FC<LoginScreenProps> = ({onLogin}) => {
     <TouchableWithoutFeedback onPress={dismissKeyboard}>
       <KeyboardAvoidingView
         style={styles.inner}
-        behavior={Platform.OS === 'ios' ? 'padding' : 'height'} // ajuste o comportamento conforme necessário
-        keyboardVerticalOffset={Platform.OS === 'ios' ? 0 : 0} // ajuste o deslocamento vertical do teclado
+        behavior={Platform.OS === 'ios' ? 'padding' : 'height'}
+        keyboardVerticalOffset={Platform.OS === 'ios' ? 0 : 0}
       >
         <View style={styles.container}>
           <Image style={styles.logo} source={require('../assets/logo.png')} />
