@@ -1,17 +1,43 @@
+import React from 'react';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
+import {Alert, Button} from 'react-native';
+import {FontAwesomeIcon} from '@fortawesome/react-native-fontawesome';
+import {
+  faHome,
+  faUser,
+  faListAlt,
+  faPlus,
+} from '@fortawesome/free-solid-svg-icons';
 import Profile from '../screens/Profile';
 import Home from '../screens/Home';
-import {FontAwesomeIcon} from '@fortawesome/react-native-fontawesome';
 import {AtividadeStack} from './stack.routes';
 import CreateActivity from '../screens/NovaAtividade';
-import {faHome} from '@fortawesome/free-solid-svg-icons/faHome';
-import {faUser} from '@fortawesome/free-solid-svg-icons/faUser';
-import {faListAlt} from '@fortawesome/free-solid-svg-icons/faListAlt';
-import {faPlus} from '@fortawesome/free-solid-svg-icons/faPlus';
 
 const Tab = createBottomTabNavigator();
 
-export default function TabRoutes() {
+interface TabRoutesProps {
+  onLogout: () => void;
+}
+
+export default function TabRoutes({onLogout}: TabRoutesProps) {
+  const handleLogout = () => {
+    Alert.alert(
+      'Confirmação',
+      'Você tem certeza que deseja sair?',
+      [
+        {
+          text: 'Cancelar',
+          style: 'cancel',
+        },
+        {
+          text: 'Sair',
+          onPress: onLogout,
+        },
+      ],
+      {cancelable: false},
+    );
+  };
+
   return (
     <Tab.Navigator
       screenOptions={({route}) => ({
@@ -28,11 +54,10 @@ export default function TabRoutes() {
             iconName = faUser;
           }
 
-          // Return the FontAwesomeIcon component
           return <FontAwesomeIcon icon={iconName} color={color} size={size} />;
         },
-        tabBarActiveTintColor: '#0dd658', // Color when tab is selected
-        tabBarInactiveTintColor: 'gray', // Color when tab is not selected
+        tabBarActiveTintColor: '#0dd658',
+        tabBarInactiveTintColor: 'gray',
       })}>
       <Tab.Screen
         name="Página Inicial"
@@ -40,8 +65,16 @@ export default function TabRoutes() {
         options={{tabBarLabel: 'Inicio', headerShown: false}}
       />
       <Tab.Screen name="Atividades" component={AtividadeStack} />
-      <Tab.Screen name="Meu Perfil" component={Profile} />
       <Tab.Screen name="Nova Atividade" component={CreateActivity} />
+      <Tab.Screen
+        name="Meu Perfil"
+        options={{
+          headerRight: () => (
+            <Button onPress={handleLogout} title="Sair" color="#3199e9" />
+          ),
+        }}>
+        {() => <Profile onLogout={handleLogout} />}
+      </Tab.Screen>
     </Tab.Navigator>
   );
 }
