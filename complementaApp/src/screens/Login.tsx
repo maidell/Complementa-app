@@ -51,6 +51,14 @@ const Login: React.FC<LoginScreenProps> = ({onLogin}) => {
     }
   };
 
+  const handleEmailChange = (text: string) => {
+    setEmail(text);
+    if (text.includes('@')) {
+      // Autocomplete com "@ufpr.br" se o usuário digita '@'
+      setEmail(text.split('@')[0] + '@ufpr.br');
+    }
+  };
+
   const dismissKeyboard = () => {
     Keyboard.dismiss();
   };
@@ -60,15 +68,14 @@ const Login: React.FC<LoginScreenProps> = ({onLogin}) => {
       <KeyboardAvoidingView
         style={styles.inner}
         behavior={Platform.OS === 'ios' ? 'padding' : 'height'}
-        keyboardVerticalOffset={Platform.OS === 'ios' ? 0 : 0}
-      >
+        keyboardVerticalOffset={Platform.OS === 'ios' ? 0 : 0}>
         <View style={styles.container}>
           <Image style={styles.logo} source={require('../assets/logo.png')} />
           <Text style={styles.title}>Login</Text>
           <Input
             placeholder="Email"
             value={email}
-            onChangeText={setEmail}
+            onChangeText={handleEmailChange}
             keyboardType="email-address"
             autoCapitalize="none"
           />
