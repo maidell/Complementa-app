@@ -69,7 +69,9 @@ Contribuições são bem-vindas! Sinta-se à vontade para abrir uma issue ou env
 
 Aqui estão algumas capturas de tela do aplicativo:
 
-<div style="display: flex;">
+<div style="display: flex; flex-wrap: wrap; gap: 5px;">
+  <img src="./complementaApp/src/assets/login.png" alt="Login" width="200" style="margin-right: 5px;" />
+  <img src="./complementaApp/src/assets/autocadastro.png" alt="Autocadastro" width="200" style="margin-right: 5px;" />
   <img src="./complementaApp/src/assets/home.png" alt="Tela de Inicial" width="200" style="margin-right: 5px;" />
   <img src="./complementaApp/src/assets/atividades.png" alt="Lista de atividades" width="200" style="margin-right: 5px;" />
   <img src="./complementaApp/src/assets/profile.png" alt="Meu perfil" width="200" style="margin-right: 5px;" />
