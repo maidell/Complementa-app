@@ -7,12 +7,17 @@ import {
   TouchableOpacity,
   TouchableWithoutFeedback,
   Keyboard,
-} from 'react-native'; // Adicione TouchableWithoutFeedback e Keyboard
+} from 'react-native';
 import {Input} from '../components/input';
 import {FontAwesomeIcon} from '@fortawesome/react-native-fontawesome';
 import {faEye, faEyeSlash} from '@fortawesome/free-solid-svg-icons';
 import {Button} from 'native-base';
-const Profile = () => {
+
+interface ProfileProps {
+  onLogout: () => void;
+}
+
+const Profile: React.FC<ProfileProps> = ({onLogout}) => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -27,6 +32,10 @@ const Profile = () => {
 
   const dismissKeyboard = () => {
     Keyboard.dismiss();
+  };
+
+  const handleLogout = () => {
+    onLogout();
   };
 
   return (
@@ -66,10 +75,14 @@ const Profile = () => {
         <Button style={styles.buttonNew} onPress={handleSaveProfile}>
           Salvar
         </Button>
+        <Button style={styles.buttonLogout} onPress={handleLogout}>
+          Sair
+        </Button>
       </View>
     </TouchableWithoutFeedback>
   );
 };
+
 const styles = StyleSheet.create({
   container: {
     flex: 1,
@@ -89,6 +102,11 @@ const styles = StyleSheet.create({
   buttonNew: {
     marginTop: 20,
     backgroundColor: '#00C299',
+    borderRadius: 12,
+  },
+  buttonLogout: {
+    marginTop: 10,
+    backgroundColor: '#3199e9',
     borderRadius: 12,
   },
   eyeIcon: {
