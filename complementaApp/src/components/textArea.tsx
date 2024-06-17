@@ -6,7 +6,7 @@ export function TextArea({...rest}: IInputProps) {
       autoCompleteType={undefined}
       fontSize="md"
       h={40}
-      bg="gray.400"
+      bg="gray.200"
       placeholderTextColor="gray.600"
       borderRadius={12}
       {...rest}
