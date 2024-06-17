@@ -8,7 +8,7 @@ export function AtividadeStack() {
   return (
     <Stack.Navigator>
       <Stack.Screen
-        name="ActivityList"
+        name="Atividades"
         component={Atividades}
         options={{
           headerShown: false,

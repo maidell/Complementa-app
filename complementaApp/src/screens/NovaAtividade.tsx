@@ -40,7 +40,7 @@ export default function CreateActivity({navigation}: {navigation: any}) {
       .then(() => {
         setName('');
         setDescription('');
-        navigation.navigate('ActivityList');
+        navigation.navigate('Atividades');
         Alert.alert('Atividade criada com sucesso!');
       })
       .catch(error => {
