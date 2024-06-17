@@ -127,55 +127,6 @@
       "email": "aaa",
       "password": "aaa",
       "role": "user"
-    },
-    {
-      "id": "1a7c",
-      "name": "mateus",
-      "email": "mateusmaidel@gmail.com",
-      "password": "aaa",
-      "role": "user"
-    },
-    {
-      "id": "8da7",
-      "name": "mateus",
-      "email": "mateusmaidel@gmail.com",
-      "password": "aaa",
-      "role": "user"
-    },
-    {
-      "id": "5c60",
-      "name": "mateus",
-      "email": "mateusmaidel@gmail.com",
-      "password": "zevrem-7vyhci-quqkoM",
-      "role": "user"
-    },
-    {
-      "id": "1b40",
-      "name": "henrique",
-      "email": "mateusmaidel@gmail.com",
-      "password": "dopvU6-bajgov-zyfkujdopvU6-bajgov-zyfkuj",
-      "role": "user"
-    },
-    {
-      "id": "5540",
-      "name": "mateus maidel",
-      "email": "@ufpr.br",
-      "password": "gircij-fYnmym-3didzi",
-      "role": "user"
-    },
-    {
-      "id": "5bc1",
-      "name": "hhhuuuuuuh",
-      "email": "@ufpr.br",
-      "password": "zepwik-cisnet-wyKny9",
-      "role": "user"
-    },
-    {
-      "id": "169d",
-      "name": "gggggggggggg",
-      "email": "@ufpr.br",
-      "password": "xihbab-cijvu7-ceKbom",
-      "role": "user"
     }
   ],
   "status": {
