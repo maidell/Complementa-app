@@ -23,10 +23,10 @@ const theme = extendTheme({
   },
 });
 
-export default function App() {
+export const App = () => {
   return (
     <NativeBaseProvider theme={theme}>
       <Routes />
     </NativeBaseProvider>
   );
-}
+};
