@@ -1,13 +1,6 @@
 {
   "activities": [
     {
-      "id": "20240601",
-      "name": "Revisão de Literatura",
-      "description": "A revisão de literatura é uma atividade acadêmica crucial que envolve a análise crítica de trabalhos já publicados sobre um determinado tema. Esse processo é fundamental para a construção de um conhecimento sólido, permitindo que o pesquisador identifique lacunas na literatura existente, tendências de pesquisa e metodologias aplicadas. A revisão de literatura também auxilia na formulação de hipóteses e na definição de objetivos claros para o estudo. Além disso, ela proporciona uma base teórica robusta que sustenta a pesquisa e confere credibilidade ao trabalho acadêmico desenvolvido.",
-      "status": 1,
-      "executor": "Ana"
-    },
-    {
       "id": "20240602",
       "name": "Desenvolvimento de Metodologia",
       "description": "O desenvolvimento de metodologia é um componente vital da pesquisa acadêmica, pois define o conjunto de métodos e técnicas que serão utilizados para conduzir o estudo. Esta etapa envolve a seleção de abordagens qualitativas ou quantitativas, a definição de instrumentos de coleta de dados, e a elaboração de procedimentos para análise dos resultados. Uma metodologia bem estruturada garante a validade e a confiabilidade dos achados, além de permitir a replicabilidade do estudo por outros pesquisadores. A escolha cuidadosa da metodologia é essencial para alcançar os objetivos de pesquisa de forma precisa e objetiva.",
@@ -125,13 +118,64 @@
       "id": "1",
       "name": "João",
       "email": "joao@ufpr.br",
-      "password": "123456"
+      "password": "123456",
+      "role": "admin"
     },
     {
       "id": "2",
       "name": "Maria",
-      "email": "maria@ufpr.br",
-      "password": "123456"
+      "email": "aaa",
+      "password": "aaa",
+      "role": "user"
+    },
+    {
+      "id": "1a7c",
+      "name": "mateus",
+      "email": "mateusmaidel@gmail.com",
+      "password": "aaa",
+      "role": "user"
+    },
+    {
+      "id": "8da7",
+      "name": "mateus",
+      "email": "mateusmaidel@gmail.com",
+      "password": "aaa",
+      "role": "user"
+    },
+    {
+      "id": "5c60",
+      "name": "mateus",
+      "email": "mateusmaidel@gmail.com",
+      "password": "zevrem-7vyhci-quqkoM",
+      "role": "user"
+    },
+    {
+      "id": "1b40",
+      "name": "henrique",
+      "email": "mateusmaidel@gmail.com",
+      "password": "dopvU6-bajgov-zyfkujdopvU6-bajgov-zyfkuj",
+      "role": "user"
+    },
+    {
+      "id": "5540",
+      "name": "mateus maidel",
+      "email": "@ufpr.br",
+      "password": "gircij-fYnmym-3didzi",
+      "role": "user"
+    },
+    {
+      "id": "5bc1",
+      "name": "hhhuuuuuuh",
+      "email": "@ufpr.br",
+      "password": "zepwik-cisnet-wyKny9",
+      "role": "user"
+    },
+    {
+      "id": "169d",
+      "name": "gggggggggggg",
+      "email": "@ufpr.br",
+      "password": "xihbab-cijvu7-ceKbom",
+      "role": "user"
     }
   ],
   "status": {
